@@ -16,7 +16,7 @@
         }
         let holeCardImages = document.querySelectorAll(".hole-card");
         holeCardImages.forEach((img, index) => {
-            img.src = `cards png/${hole_cards[index]}.png`;
+            img.src = `static/cards/${hole_cards[index]}.svg`;
         });
     
     document.querySelector('#flop').onclick = function () {
@@ -29,7 +29,7 @@
         
         let flopCardImages = document.querySelectorAll(".flop-card");
         flopCardImages.forEach((img, index) => {
-            img.src = `cards png/${flop_cards[index]}.png`;
+            img.src = `static/cards/${flop_cards[index]}.svg`;
         })
 
     }
@@ -39,14 +39,14 @@
         // get river card
         river_card = deck.pop(); 
         riverCardImage = document.querySelector('.river-card');
-        riverCardImage.src = `cards png/${river_card}.png`;
+        riverCardImage.src = `static/cards/${river_card}.svg`;
     }
 
     document.querySelector("#turn-button").onclick = function () {
         // get turn card
         turn_card = deck.pop(); 
         riverCardImage = document.querySelector('.turn-card');
-        riverCardImage.src = `cards png/${turn_card}.png`;
+        riverCardImage.src = `static/cards/${turn_card}.svg`;
     }
 
     document.querySelector('#reset-button').onclick = function () {
@@ -56,7 +56,7 @@
         // make all the cards appear like backs
         let allCardImages = document.querySelectorAll(".card");
         allCardImages.forEach((img) => {
-            img.src = 'cards png/BACK.png';
+            img.src = 'static/cards/1B.svg';
         })
         
     }
@@ -64,13 +64,13 @@
 
 
 function buildDeck() {
-    let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    let values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K"];
     let suits = ["C", "D", "H", "S"];
     let deck = []; 
     
     for (let i = 0; i < suits.length; i++) {
         for (let j = 0; j < values.length; j++) {
-            deck.push(values[j] + "-" + suits[i]);
+            deck.push(values[j] + suits[i]);
         }
     }
     return deck;
