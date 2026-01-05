@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.heading {
+    color: black;
+}
+
+.app {
+    background-color: #35664B;
+}
+
+
+
+.cards img {
+    height: 123px;
+    width: 88px; 
+    margin: auto;
+}
+
+.container--bots {
+    display: flex;
+    justify-content: center;
+}
+
+.bot {
+    margin: auto;
+}
+
+.container--player {
+    margin: auto;
+}
+
+.buttons {
+    margin: 10px;
+}
